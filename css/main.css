@@ -2,7 +2,7 @@
     display: flex;
 }
 .menu-parent li {
-    list-style: none;
+    list-style: none;    
 }
 .menu-parent a {
     width: 200px;
@@ -17,11 +17,12 @@
 .menu-child {
     display: none;
 }
-
+.menu-parent li:hover{
+    border: solid 1px #333; 
+}
 .menu-parent li:hover .menu-child{
     margin-left: -40px;
-    display: block;   
-    
+    display: block;     
 } 
 .menu-child  a{
     background-color: rgb(233, 245, 248);
