@@ -1,0 +1,70 @@
+.menu-parent {
+    display: flex;
+}
+.menu-parent li {
+    list-style: none;
+}
+.menu-parent a {
+    width: 200px;
+    display: block;
+    color: rgb(7, 102, 165);
+    padding: 10px;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.menu-child {
+    display: none;
+}
+
+.menu-parent li:hover .menu-child{
+    margin-left: -40px;
+    display: block;   
+    
+} 
+.menu-child  a{
+    background-color: rgb(233, 245, 248);
+    color: rgb(2, 0, 0);
+    font-size: 10px;
+    width: calc(100% - 35px);
+    padding: 2px;
+}
+.menu-child li:hover .menu-child a{
+    color: red;
+}
+.search-container{
+    position: relative;
+}
+.autocomplete-suggestions {
+    position: absolute;
+    width: 100%;
+    border: solid 1px #ddd;
+    right: 0;
+    margin-top: 2px;
+    max-height: 300px;
+    overflow: auto;
+    display: none;
+    background: #fff;
+    z-index: 999;
+}
+.autocomplete-suggestions a {
+    display: block;
+    padding: 10px;
+    overflow: hidden;
+}
+.autocomplete-suggestions a img {
+    width: 60px;
+    float: left;
+}
+.autocomplete-suggestions a .info {
+    display: block;
+    margin-left: 65px;
+}
+.autocomplete-suggestions a .info .name {
+    display: block;
+    color: #333;
+}
+.autocomplete-suggestions a .info .price {
+    color: #ec1c24;
+}
