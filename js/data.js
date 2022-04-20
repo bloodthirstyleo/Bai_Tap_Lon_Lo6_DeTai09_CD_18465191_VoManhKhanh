@@ -1,7 +1,7 @@
 var valueData = [
     {
         "id": "MD0001",
-        "price": "",
+        "price": "652.000 VND",
         "title": "Thiết bị chuyển mạch Ruijie Switch RG-ES108GD (8-Port 100/1000MB RJ45 ) - Vỏ kim loại",
         "image": "../img/item1.jpg",
         "url": "/MD0001.html"
@@ -23,7 +23,7 @@ var valueData = [
     {
         "id": "WF0002",
         "price": "490.000 VND",
-        "title": "Bộ Định Tuyến TP-Link Archer C6 V3.20 AC1200 Wireless MU-MIMO Gigabit Router",
+        "title": "Bộ Định Tuyến TP-Link Archer C6 V3.21 AC1200 Wireless MU-MIMO Gigabit Router",
         "image": "../img/item4.jpg",
         "url": "/WF0002.html"
     },
@@ -112,4 +112,16 @@ var valueData = [
         "image": "../img/item2.jpg",
         "url": "/WF0009.html"
     }
+]
+var valueUser = [
+    {
+        "user": "admin",
+        "password": "admin123",
+        "permission": "1",        
+    },
+    {
+        "user": "user1",
+        "password": "user123",
+        "permission": "2",        
+    },
 ]

@@ -1,39 +1,4 @@
-.menu-parent {
-    display: flex;
-}
-.menu-parent li {
-    list-style: none;    
-}
-.menu-parent a {
-    width: 200px;
-    display: block;
-    color: rgb(7, 102, 165);
-    padding: 10px;
-    font-weight: bold;
-    text-decoration: none;
-    text-transform: uppercase;
-}
 
-.menu-child {
-    display: none;
-}
-.menu-parent li:hover{
-    border: solid 1px #333; 
-}
-.menu-parent li:hover .menu-child{
-    margin-left: -40px;
-    display: block;     
-} 
-.menu-child  a{
-    background-color: rgb(233, 245, 248);
-    color: rgb(2, 0, 0);
-    font-size: 10px;
-    width: calc(100% - 35px);
-    padding: 2px;
-}
-.menu-child li:hover .menu-child a{
-    color: red;
-}
 .search-container{
     position: relative;
 }
