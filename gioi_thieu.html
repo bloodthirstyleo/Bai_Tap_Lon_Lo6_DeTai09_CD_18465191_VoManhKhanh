@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,7 +8,7 @@
     <link rel="stylesheet" href="/header.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/wrap.css">
-    <title>Document</title>
+    <title>Giới thiệu công ty</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
     <link rel="stylesheet" href="../css/main.css">
@@ -15,7 +16,8 @@
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/data.js"></script>    
     <script src="../js/main.js"></script>
 
 
@@ -23,14 +25,14 @@
 </head>
 
 <body>
-    <div class="container p-3 my-3 border bg-light">
+    <div class="container-fluid p-3 my-3 border bg-light">
         <div class="row" id="main-banner">
             <img src="../img/banner.jpg" alt="banner" class="img-fluid">
         </div>
         <div class="row pt-1">
             <div class="col-5 ">
                 <marquee behavior="" direction="">Coder: Võ Mạnh Khánh     MSSV:18465191      Lớp:DHCNTT19A       Môn : Thiết Kế Web  
-                    Đề Tài:Web bán thiết bị mạng</marquee>
+                      Đề Tài:Web bán thiết bị mạng</marquee>
             </div>
             <div class="col-3">
 
@@ -55,32 +57,34 @@
         </div>
         <div class="row mt-3 bg-primary">
             <div class="col-2">
-                <img src="../img/logo.PNG" alt="logo" class="img-fluid">
+                <a href="index.html">
+                    <img src="../img/logo.PNG" alt="logo" class="img-fluid">
+                </a>
             </div>
             <div class="col-1"></div>
             <div class="col-7">
-                <form action="#" class="form-inline">
-                    <select name="scat_id" id="" class="form-control mt-2">
+                <form action="listProduct.html" class="form-inline">
+                    <select name="scat_id" id="value-selectSearch" class="form-control mt-2">
                         <option value="">Tất cả danh mục</option>
-                        <option value="">Modem-Wifi</option>
-                        <option value="">Dây Mạng</option>
-                        <option value="">Card Mạng</option>
-                        <option value="">Dcom 3G-4G</option>    
+                        <option value="WF">Modem-Wifi</option>
+                        <option value="DM">Dây Mạng</option>
+                        <option value="CW">Card Mạng</option>
+                        <option value="DC">Dcom 3G-4G</option>                        
                     </select>
                     <div class="search-container">
                         <div>
                             <input type="text" id="search-product" class="form-control form-control mt-2">
-                            <button type="submit" class="btn mt-2">Tìm Kiếm</button>
+                            <button type="submit" class="btn mt-2 btn-light" id="submit-search">Tìm Kiếm</button>
                         </div>
                         <div class="autocomplete-suggestions" style="display: none;">
                             <div class="list">
-                                <a href="/mainboard-asrock-b560m-pro4.html">
-                                    <img src="https://anphat.com.vn/media/product/75_36403_b560m_pro4_l1_.png"
-                                        alt="Mainboard ASROCK B560M Pro4">
+                                <a href="">
+                                    <img src=""
+                                        alt="">
                                     <span class="info">
-                                        <span class="name">Mainboard ASROCK B560M Pro4
-                                        <span class="price">2.699.000 VNĐ
-                                    
+                                        <span class="name"></span>
+                                        <span class="price"></span>
+                                    </span>
                                 </a>
                             </div>
                         </div>
@@ -94,8 +98,8 @@
                         <i class="fa-regular fa-user fa-2x"></i>
                     </div>
                     <div class="col-8 pl-0">
-                        <a href="#" class="text-white" data-toggle="modal" data-target="#modal-login">Đăng Nhập</a>
-                        <a href="#" class="text-white" data-toggle="modal" data-target="#modal-registration">Đăng ký</a>
+                        <a href="login.html" class="text-white mt-3">Đăng Nhập</a>
+                        <a href="registration.html" class="text-white" ><br>Đăng ký</a>
                     </div>
                 </div>
             </div>
@@ -103,174 +107,68 @@
         <div class="row">
             <div class="col-1"></div>
             <div class="col-3">
-                <ul class="menu-parent">
-                    <li>
-                        <a href="gioi_thieu.html">Công Ty</a>
-                    </li>
-                    <li><a href="index.html">Sản Phẩm</a>
-                        <ul class="menu-child">
-                            <li>
-                                <a href="#">Modem-Wifi</a>
-                            </li>
-                            <li>
-                                <a href="">Dây Mạng</a>
-                            </li>
-                            <li>
-                                <a href="">Card Mạng</a>
-                            </li>
-                            <li>
-                                <a href="">DCom 3G-4G</a>
-                            </li>                           
-                        </ul>
-                    </li>
-                </ul>
+                <nav class="navbar navbar-expand-sm bg-light">                    
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="gioi_thieu.html">Công Ty</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="listProduct.html" id="linkLissProductAll">Sản Phẩm</a>                            
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Site Map</a>
+                        </li>
+                    </ul>                  
+                  </nav>
             </div>
             <div class="col-8"></div>                      
         </div>
         <div class="row">
             <div class="col-1"></div>
-            <div class="col-10 border">                
+            <div class="col-10" id="index_body">
                 <div class="right-side">
-                    <h1 class="title-page">Giới thiệu</h1>
-                    
-              <p><strong>Tên Công Ty:  </strong>CÔNG TY CỔ PHẦN VIẾT CODE XUYÊN ĐÊM</p>
-              <p><strong>Tên giao dịch quốc tế: </strong>CODE OVER NIGHT COMPANY</p>
-              <p>(Trực thuộc:KHOA CNTT-ĐẠI HỌC CÔNG NGHIỆP)</p>              
-              <p>Giấy CNĐKKD và mã số doanh nghiệp số:<strong> 18465191-CDCNTT19A </strong>do Sở Chém Gió &amp; Mộng Mơ thành phố Hồ Chí Minh cấp </p>
-              <p>Đại diện theo pháp luật của doanh nghiệp:<strong> Ông Võ Mạnh Khánh - Chủ Tịch Hội Đồng Quản Trị - CEO</strong></p>
-              <p><strong>>1. Giới thiệu chung </strong></p>
-              <p>>Công ty CÔNG TY CỔ PHẦN VIẾT CODE XUYÊN ĐÊM được thành lập ngày 7/8/1997. 
-                  Những ngày đầu thành lập, VIẾT CODE XUYÊN ĐÊM chỉ có 1 nhân sự chủ chốt. Sau hơn 25 năm hoạt động, 
-                  hiện nay quy mô Công ty phát triển có hơn 1 nhân viên tận tâm với nghề code và hay code tới 2 hay 3 giờ 
-                sáng thậm chí code xuyên đêm như mục tiêu được đặt ra như tên công ty </p>
-              <p>>Trong suốt hơn 25 năm hoạt động, VIẾT CODE XUYÊN ĐÊM luôn là một trong những công ty hàng đầu miền 
-                  rìa Gò Vấp trong lĩnh vực công nghệ thông tin, đại lý trải khắp quận Gò vấp, 
-                  doanh số tăng trưởng theo từng cái trăm năm, luôn nằm trong top đầu về doanh số của danh 
-                  sách thi lại các cấp.</p>
-              <p>>Năm 2022, đánh dấu cột mốc quan trọng trong chặng đường phát triển của công ty khi lần đầu 
-                  tiên VIẾT CODE XUYÊN ĐÊM lọt TOP 200 sinh viên qua môn Web. </p>              
-              <p><strong>>2. Tầm nhìn của VIẾT CODE XUYÊN ĐÊM</strong></p>
-              <p>>- Mục tiêu trở thành sinh viên không phải học lại.</p>
-              <p>>- Xây dựng VIẾT CODE XUYÊN ĐÊM trở thành một môi trường 
-                  làm việc chuyên nghiệp nơi mà mọi cá nhân phát huy tối đa sức sáng tạo, 
-                  năng lực của bản thân.</p>
-              <p>>- Xây dựng VIẾT CODE XUYÊN ĐÊM trở thành ngôi nhà chung cho mọi cán bộ nhân 
-                  viên cùng nhau phát triển, chia sẻ quyền lợi, trách nhiệm và nghĩa vụ công bằng, 
-                  minh bạch nhất.</p>
-              <p> <strong>3. Giá trị cốt lõi của VIẾT CODE XUYÊN ĐÊM</strong></p>
-              <p>- Trưởng thành qua những THÁCH THỨC &amp; THẤT BẠI,</p>
-              <p>- Thích ứng nhanh là SỨC MẠNH CẠNH TRANH,</p>
-              <p>- Sáng tạo là SỨC SỐNG,</p>
-              <p>- Tư duy HỆ THỐNG,</p>
-              <p>- Kết hợp ĐÔNG TÂY Nam Bắc,</p>
-              <p>- VIẾT CODE XUYÊN ĐÊM là ngôi nhà chung.</p>
-              <p> <strong>4. Triết lý kinh doanh của VIẾT CODE XUYÊN ĐÊM</strong></p>
-              <p><strong>- Thấu hiểu: </strong>Mỗi khách hàng là một con người – một cá thể riêng biệt, cần được tôn trọng, quan tâm và lắng nghe, thấu hiểu và phục vụ một cách riêng biệt. VIẾT CODE XUYÊN ĐÊM sẽ là nơi hiểu được nhu cầu của khách hàng hơn bất kỳ công ty nào khác.</p>
-              <p><strong><em>Công Ty Cổ Phần  VIẾT CODE XUYÊN ĐÊM</em></strong></p>
-              <p><strong><em>Tầng 1, Số 321 Đường Dương Quản Hàm, Gò Vấp, Tp.HCM Việt Nam</em></strong></p>
-              <p><strong><em>MST: 0108940873</em></strong></p>
+                    <h1 class="title-page">Giới thiệu</h1>                    
+                    <p><strong>Tên Công Ty:  </strong>CÔNG TY CỔ PHẦN VIẾT CODE XUYÊN ĐÊM</p>
+                    <p><strong>Tên giao dịch quốc tế: </strong>CODE OVER NIGHT COMPANY</p>
+                    <p>(Trực thuộc:KHOA CNTT-ĐẠI HỌC CÔNG NGHIỆP)</p>              
+                    <p>Giấy CNĐKKD và mã số doanh nghiệp số:<strong> 18465191-CDCNTT19A </strong>do Sở Chém Gió &amp; Mộng Mơ thành phố Hồ Chí Minh cấp </p>
+                    <p>Đại diện theo pháp luật của doanh nghiệp:<strong> Ông Võ Mạnh Khánh - Chủ Tịch Hội Đồng Quản Trị - CEO</strong></p>
+                    <p><strong>>1. Giới thiệu chung </strong></p>
+                    <p>>Công ty CÔNG TY CỔ PHẦN VIẾT CODE XUYÊN ĐÊM được thành lập ngày 7/8/1997. 
+                        Những ngày đầu thành lập, VIẾT CODE XUYÊN ĐÊM chỉ có 1 nhân sự chủ chốt. Sau hơn 25 năm hoạt động, 
+                        hiện nay quy mô Công ty phát triển có hơn 1 nhân viên tận tâm với nghề code và hay code tới 2 hay 3 giờ 
+                        sáng thậm chí code xuyên đêm như mục tiêu được đặt ra như tên công ty </p>
+                    <p>>Trong suốt hơn 25 năm hoạt động, VIẾT CODE XUYÊN ĐÊM luôn là một trong những công ty hàng đầu miền 
+                        rìa Gò Vấp trong lĩnh vực công nghệ thông tin, đại lý trải khắp quận Gò vấp, 
+                        doanh số tăng trưởng theo từng cái trăm năm, luôn nằm trong top đầu về doanh số của danh 
+                        sách thi lại các cấp.</p>
+                    <p>>Năm 2022, đánh dấu cột mốc quan trọng trong chặng đường phát triển của công ty khi lần đầu 
+                        tiên VIẾT CODE XUYÊN ĐÊM lọt TOP 200 sinh viên qua môn Web. </p>              
+                    <p><strong>>2. Tầm nhìn của VIẾT CODE XUYÊN ĐÊM</strong></p>
+                    <p>>- Mục tiêu trở thành sinh viên không phải học lại.</p>
+                    <p>>- Xây dựng VIẾT CODE XUYÊN ĐÊM trở thành một môi trường 
+                        làm việc chuyên nghiệp nơi mà mọi cá nhân phát huy tối đa sức sáng tạo, 
+                        năng lực của bản thân.</p>
+                    <p>>- Xây dựng VIẾT CODE XUYÊN ĐÊM trở thành ngôi nhà chung cho mọi cán bộ nhân 
+                        viên cùng nhau phát triển, chia sẻ quyền lợi, trách nhiệm và nghĩa vụ công bằng, 
+                        minh bạch nhất.</p>
+                    <p> <strong>3. Giá trị cốt lõi của VIẾT CODE XUYÊN ĐÊM</strong></p>
+                    <p>- Trưởng thành qua những THÁCH THỨC &amp; THẤT BẠI,</p>
+                    <p>- Thích ứng nhanh là SỨC MẠNH CẠNH TRANH,</p>
+                    <p>- Sáng tạo là SỨC SỐNG,</p>
+                    <p>- Tư duy HỆ THỐNG,</p>
+                    <p>- Kết hợp ĐÔNG TÂY Nam Bắc,</p>
+                    <p>- VIẾT CODE XUYÊN ĐÊM là ngôi nhà chung.</p>
+                    <p> <strong>4. Triết lý kinh doanh của VIẾT CODE XUYÊN ĐÊM</strong></p>
+                    <p><strong>- Thấu hiểu: </strong>Mỗi khách hàng là một con người – một cá thể riêng biệt, cần được tôn trọng, quan tâm và lắng nghe, thấu hiểu và phục vụ một cách riêng biệt. VIẾT CODE XUYÊN ĐÊM sẽ là nơi hiểu được nhu cầu của khách hàng hơn bất kỳ công ty nào khác.</p>
+                    <p><strong><em>Công Ty Cổ Phần  VIẾT CODE XUYÊN ĐÊM</em></strong></p>
+                    <p><strong><em>Tầng 1, Số 321 Đường Dương Quản Hàm, Gò Vấp, Tp.HCM Việt Nam</em></strong></p>
+                    <p><strong><em>MST: 0108940873</em></strong></p>
                   </div>
             </div>
             <div class="col-1"></div>
         </div>
-    </div>
-    <div class="modal" id="modal-login" tabindex="-1" role="dialog">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-body p-5">
-                    <h3 class="text-center text-primary">Đăng Nhập</h3>
-                    <form action="#" id="modal1-form-login">
-                        <div class="form-group">
-                            <i class="far fa-user"></i>
-                            <input type="text" class="form-input" id="modal-login-txtuser" placeholder="Tên đăng nhập">
-                            <br>
-                            <span id="modal-login-spUser">*
-                        </div>
-                        <div class="form-group">
-                            <i class="fas fa-key"></i>
-                            <input type="password" class="form-input" id="modal-login-txtpassword"
-                                placeholder="Mật khẩu">
-                            <br>
-                            <span id="modal-login-spPassWord">*
-                        </div>
-                        <button type="button" id="modal-login-submit" class="btn btn-primary">Đăng Nhập</button>
-                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="modal" id="modal-registration" tabindex="-1" role="dialog">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-body p-5">
-                    <h3 class="text-center text-primary">Đăng Ký</h3>
-                    <form action="#" id="modal1-form-login">
-                        <div class="form-group">
-                            <label for="modal-registration-txtuser" class="text-primary">Tên Đăng Nhập</label>
-                            <br>
-                            <i class="far fa-user"></i>
-                            <input type="text" class="form-input" id="modal-registration-txtuser"
-                                placeholder="Tên đăng nhập">
-                            <br>
-                            <span id="modal-registration-spUser">*
-                        </div>
-                        <div class="form-group">
-                            <label for="modal-registration-txtpassword" class="text-primary">Mật Khẩu</label>
-                            <br>
-                            <i class="fas fa-key"></i>
-                            <input type="password" class="form-input" id="modal-registration-txtpassword"
-                                placeholder="Mật khẩu">
-                            <br>
-                            <span id="modal-registration-spPassWord">*
-                        </div>
-                        <div class="form-group">
-                            <label for="modal-registration-txtRepassword" class="text-primary">Nhập Lại Mật Khẩu</label>
-                            <br>
-                            <i class="fas fa-key"></i>
-                            <input type="password" class="form-input" id="modal-registration-txtRepassword"
-                                placeholder="Nhập lại mật khẩu">
-                            <br>
-                            <span id="modal-registration-spRePassWord">*
-                        </div>
-                        <div class="form-group">
-                            <label for="modal-registration-txtName" class="text-primary">Họ Và Tên</label>
-                            <br>                            
-                            <input type="text" class="form-input" id="modal-registration-txtName"
-                                placeholder="Nhập Họ và Tên">
-                            <br>
-                            <span id="modal-registration-spName">*
-                        </div>
-                        <div class="form-group">
-                            <label for="" class="text-primary">Giới tính</label>
-                            <form>
-                                <input checked="checked" name="gioitinh" type="radio" value="Nam" />Nam
-                                <input name="gioitinh" type="radio" value="Nữ" />Nữ                                
-                            </form>
-                        </div>
-                        <div class="form-group">
-                            <label for="modal-registration-txtEmail" class="text-primary">Địa Chỉ EMail</label>
-                            <br>                            
-                            <input type="email" class="form-input" id="modal-registration-txtEmail"
-                                placeholder="Nhập EMail">
-                            <br>
-                            <span id="modal-registration-spEmail">*
-                        </div>
-                        <div class="form-group">
-                            <label for="modal-registration-txtPhone" class="text-primary">Số Điện Thoại</label>
-                            <br>                            
-                            <input type="text" class="form-input" id="modal-registration-txtPhone"
-                                placeholder="Nhập Số Điện Thoại">
-                            <br>
-                            <span id="modal-registration-spPhone">*
-                        </div>
-                        <button type="button" id="modal-registration-submit" class="btn btn-primary">Đăng Ký</button>
-                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
+    </div>    
 </body>
 
 </html>

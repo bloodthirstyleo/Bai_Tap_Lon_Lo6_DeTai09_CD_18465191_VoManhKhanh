@@ -63,18 +63,18 @@
             </div>
             <div class="col-1"></div>
             <div class="col-7">
-                <form action="#" class="form-inline">
-                    <select name="scat_id" id="" class="form-control mt-2">
+                <form action="listProduct.html" class="form-inline">
+                    <select name="scat_id" id="value-selectSearch" class="form-control mt-2">
                         <option value="">Tất cả danh mục</option>
-                        <option value="">Modem-Wifi</option>
-                        <option value="">Dây Mạng</option>
-                        <option value="">Card Mạng</option>
-                        <option value="">Dcom 3G-4G</option>                        
+                        <option value="WF">Modem-Wifi</option>
+                        <option value="DM">Dây Mạng</option>
+                        <option value="CW">Card Mạng</option>
+                        <option value="DC">Dcom 3G-4G</option>                        
                     </select>
                     <div class="search-container">
                         <div>
                             <input type="text" id="search-product" class="form-control form-control mt-2">
-                            <button type="submit" class="btn mt-2 btn-light">Tìm Kiếm</button>
+                            <button type="submit" class="btn mt-2 btn-light" id="submit-search">Tìm Kiếm</button>
                         </div>
                         <div class="autocomplete-suggestions" style="display: none;">
                             <div class="list">
@@ -97,9 +97,7 @@
                     <div class="col-4 mt-2 pr-0">
                         <i class="fa-regular fa-user fa-2x"></i>
                     </div>
-                    <div class="col-8 pl-0">
-                        <a href="login.html" class="text-white mt-3">Đăng Nhập</a>
-                        <a href="registration.html" class="text-white" ><br>Đăng ký</a>
+                    <div class="col-8 pl-0" id="login_container">                        
                     </div>
                 </div>
             </div>

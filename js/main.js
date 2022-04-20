@@ -1,8 +1,7 @@
 $(document).ready(function () {  
     
      //Đây là hàm search
-    $("#search-product").keyup(function () {
-        console.log("ok");
+    $("#search-product").keyup(function () {        
         const key = $(this).val();            
         $(".autocomplete-suggestions").css('display','block');
         $(".autocomplete-suggestions .list").html("");        
@@ -20,9 +19,36 @@ $(document).ready(function () {
     $(document).click(function () {
         $(".autocomplete-suggestions").css('display','none');
     })
+    $("login_container").ready(function() {
+        let successLoginUser = localStorage.getItem("successLoginUser");
+        
+        console.log(successLoginUser);        
+        if(localStorage.getItem("successLogin") == "a")
+        {
+            $("#login_container").html("<a href='userInfo.html' class='text-white mt-5 pt-3'><h3>"+successLoginUser+"</h3></a>");
+        }
+        else
+        {
+            $("#login_container").html("<a href='login.html' class='text-white mt-3'>Đăng Nhập</a>"+
+                                        "<a href='registration.html' class='text-white'><br>Đăng ký</a>");
+        }
+    });
 
    //Hết hàm search
 
     localStorage.setItem('valueUser',JSON.stringify(valueUser));
-    localStorage.setItem('valueData',JSON.stringify(valueData));  
+    localStorage.setItem('valueData',JSON.stringify(valueData));
+    $("#linkLissProductAll").click(function() {
+        let valueSearch = " ";
+        localStorage.setItem("descriptionListItem",valueSearch);
+    });
+    $("#value-selectSearch").change(function () { 
+        let valueSearch = $("#value-selectSearch").val();
+        localStorage.setItem("descriptionListItem",valueSearch);
+        location.href = "listProduct.html";       
+    });
+    $("#submit-search").click(function() {
+        let valueSearch = $("#search-product").val();
+        localStorage.setItem("descriptionListItem",valueSearch);           
+    });  
 })

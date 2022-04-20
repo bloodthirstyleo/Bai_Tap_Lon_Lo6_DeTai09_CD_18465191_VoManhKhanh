@@ -53,18 +53,18 @@
                 </div>
                 <div class="col-1"></div>
                 <div class="col-7">
-                    <form action="#" class="form-inline">
-                        <select name="scat_id" id="" class="form-control mt-2">
-                            <option value="">Tất cả danh mục</option>
-                            <option value="">Modem-Wifi</option>
-                            <option value="">Dây Mạng</option>
-                            <option value="">Card Mạng</option>
-                            <option value="">Dcom 3G-4G</option>                        
+                    <form action="listProduct.html" class="form-inline">
+                        <select name="scat_id" id="value-selectSearch" class="form-control mt-2">
+                            <option value=" ">Tất cả danh mục</option>
+                            <option value="WF">Modem-Wifi</option>
+                            <option value="DM">Dây Mạng</option>
+                            <option value="CW">Card Mạng</option>
+                            <option value="DC">Dcom 3G-4G</option>                        
                         </select>
                         <div class="search-container">
                             <div>
                                 <input type="text" id="search-product" class="form-control form-control mt-2">
-                                <button type="submit" class="btn mt-2 btn-light">Tìm Kiếm</button>
+                                <button type="submit" class="btn mt-2 btn-light" id="submit-search">Tìm Kiếm</button>
                             </div>
                             <div class="autocomplete-suggestions" style="display: none;">
                                 <div class="list">
@@ -78,14 +78,35 @@
                                     </a>
                                 </div>
                             </div>
+                            
                         </div>
     
-                    </form>
+                    </form>                    
                 </div>
                 <div class="col-2">
                 </div>
-            </div>                  
+            </div>
+            <div class="row">
+                <div class="col-1"></div>
+                <div class="col-3">
+                    <nav class="navbar navbar-expand-sm bg-light">                    
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="gioi_thieu.html">Công Ty</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="listProduct.html" id="linkLissProductAll">Sản Phẩm</a>                            
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Site Map</a>
+                            </li>
+                        </ul>                  
+                      </nav>
+                </div>
+                <div class="col-8"></div>                      
+            </div>                 
         </div>
+        
         <div class="row">
             <div class="col-3"></div>
             <div class="col-6">

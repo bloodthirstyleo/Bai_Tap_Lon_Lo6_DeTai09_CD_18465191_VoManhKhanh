@@ -123,6 +123,15 @@ $(document).ready(function () {
             }            
         }
     });
+    $("#linkLissProductAll").click(function() {
+        let valueSearch = " ";
+        localStorage.setItem("descriptionListItem",valueSearch);
+    });
+    $("#value-selectSearch").change(function () { 
+        let valueSearch = $("#value-selectSearch").val();
+        localStorage.setItem("descriptionListItem",valueSearch);
+        location.href = "listProduct.html";       
+    });
      //Đây là hàm search
      $("#search-product").keyup(function () {
         console.log("ok");

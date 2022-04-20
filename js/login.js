@@ -50,13 +50,39 @@ $(document).ready(function () {
                 if (($("#modal-login-txtuser").val()) == element.user && ($("#modal-login-txtpassword").val())  == element.password)
                 {
                     successLogin = true;
-                    location.href = "../index.html";
+                    localStorage.setItem("successLogin","a");
+                    localStorage.setItem("successLoginUser",$("#modal-login-txtuser").val());
+                    location.href = "index.html";
                 }
             });
             console.log(successLogin)
         }
         
+    });
+    $("#linkLissProductAll").click(function() {
+        let valueSearch = " ";
+        localStorage.setItem("descriptionListItem",valueSearch);
     }); 
+    $("#value-selectSearch").change(function () { 
+        let valueSearch = $("#value-selectSearch").val();
+        localStorage.setItem("descriptionListItem",valueSearch);
+        location.href = "listProduct.html";       
+    });
+    $("login_container").ready(function() {
+        let successLoginUser = localStorage.getItem("successLoginUser");
+        
+        console.log(successLoginUser);        
+        if(localStorage.getItem("successLogin") == "a")
+        {
+            $("#login_container").html("<a href='userInfo.html' class='text-white mt-5 pt-3'><h3>"+successLoginUser+"</h3></a>");
+        }
+        else
+        {
+            $("#login_container").html("<a href='login.html' class='text-white mt-3'>Đăng Nhập</a>"+
+                                        "<a href='registration.html' class='text-white'><br>Đăng ký</a>");
+        }
+    });
+
     
      /* #region search funtion */
      $("#search-product").keyup(function () {
