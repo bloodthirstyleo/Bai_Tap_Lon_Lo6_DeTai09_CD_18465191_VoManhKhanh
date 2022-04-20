@@ -6,7 +6,7 @@ $(document).ready(function () {
         $(".autocomplete-suggestions").css('display','block');
         $(".autocomplete-suggestions .list").html("");        
         valueData.filter(x =>x.title.toLowerCase().includes(key.toLowerCase())).forEach(element => {
-            let temp = $("<a href='"+element.url+"'>"+
+            let temp = $("<a href='infoProduct.html' class='autocomplete-value-item'>"+
             "<img src='"+element.image+"'"+
             "    alt='"+element.title+"'>"+
             "<span class='info'>"+
@@ -15,7 +15,18 @@ $(document).ready(function () {
             
             $(".autocomplete-suggestions .list").append(temp);
         });        
-    })
+    });
+    // $(".autocomplete-value-item").click(function() {
+    //     console.log("hàm chạy nè");
+    //     let id_Value = $(this).text().slice(0,6);
+    //     localStorage.setItem("descriptionInfoItem",id_Value);
+    // });
+    // $(".autocomplete-value-item").click(function () {
+    //     console.log("hàm chạy nè");
+    //     let id_Value = $(this).text();
+    //     console.log(id_Value);
+    //     localStorage.setItem("descriptionInfoItem",id_Value);
+    //   })
     $(document).click(function () {
         $(".autocomplete-suggestions").css('display','none');
     })
