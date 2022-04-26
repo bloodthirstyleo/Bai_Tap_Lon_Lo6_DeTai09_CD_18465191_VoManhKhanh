@@ -119,7 +119,7 @@ $(document).ready(function () {
                 valueDataUsers.push(temp);                   
                 localStorage.setItem('valueUser',JSON.stringify(valueDataUsers));
                 alert("Đăng kí thành công!");
-                location.href = "../login.html";
+                location.href = "./login.html";
             }            
         }
     });
